@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Nanum+Gothic&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #0c0c0c;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+body.light-mode {
+    background-color: #0c0c0c;
+    color: #e5e5e5;
+}
+
+#container {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border: 1px solid #f00;
+    transition: border-color 1s ease;
+}
+
+body.light-mode #container {
+    border: 1px solid #e5e5e5;
+}
+
+.info {
+    color: inherit; /* Use the same color as the body element */
+    position: absolute;
+    left: 2%;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.rapida {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-bottom: 0px;
+    padding-left: 1%;
+    padding-top: 5%;
+    position: relative;
+
+}
+.rapidaa {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-bottom: 0px;
+    
+    font-size: 62px;
+}
+.info nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 25%;
+}
+
+.info nav ul li {
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #0c0c0c; /* Use the same color as the body element */
+    transition: color 1s ease, background-color 1s ease;
+    padding-left: 6px;
+    position: relative;
+    
+}
+
+body.light-mode .info nav ul li {
+    font-size: 1em;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #e5e5e5; /* Use the same color as the body element */
+    transition: color 1s ease, background-color 1s ease;
+    padding-left: 6px;
+    position: relative;
+    
+}
+.info nav ul li.active {
+    background-color: #e5e5e5; /* color of the little square */
+    color: #e5e5e5; /* text color */
+    width: 5px;
+}
+
+body.light-mode .info nav ul li.active {
+    background-color: #0c0c0c;
+    color: #0c0c0c;
+    width: 5px;
+
+}
+.info nav ul li.active::after {
+    content: "";
+    display: block;
+    height: 10px; /* Adjust as needed */
+    width: 10px; /* Adjust as needed */
+    background-color: #0c0c0c; /* White color */
+    position: absolute;
+    left: -15px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+body.light-mode .info nav ul li.active::after {
+    background-color: #e5e5e5; /* Black color in light mode */
+}
+.des {
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-left: 6px;
+    font-size: 24px;
+}
+
+.footer-text {
+    color: inherit; /* Use the same color as the body element */
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    text-align: left;
+    font-size: 0.8em;
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1.8;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.footer {
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+    text-align: right;
+    width: 100%;
+    font-weight: 600;
+}
+
+#theme-switcher {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    cursor: pointer;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    
+    
+}
+.theme-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #0c0c0c;
+    margin-right: -1px;
+    margin-left: 10px;
+    transition: background-color 1s ease;
+}
+
+.dark-dot {
+    background-color: #0c0c0c;
+}
+
+.light-dot {
+    background-color: transparent;
+}
+
+body.light-mode .theme-dot {
+    border-color: #e5e5e5;
+}
+
+body.light-mode .dark-dot {
+    background-color: transparent;
+}
+
+body.light-mode .light-dot {
+    background-color: #e5e5e5;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #0c0c0c;
+    background-color: transparent;
+    color: #0c0c0c;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body.light-mode .form-input {
+    border: 1px solid #e5e5e5;
+    background-color: transparent;
+    color: #e5e5e5;
+}
+
+.form-input::placeholder {
+    color: #0c0c0c;
+    opacity: 0.7;
+}
+
+body.light-mode .form-input::placeholder {
+    color: #e5e5e5;
+    opacity: 0.7;
+}
+
+.form-input:focus {
+    border-color: #f00;
+}
+
+body.light-mode .form-input:focus {
+    border-color: #f00;
+}
+
+#contactForm {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#explanation {
+    height: 150px;
+    resize: none;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #e5e5e5;
+    color: #0c0c0c;
+    padding: 14px 20px;
+    border: 1px solid #0c0c0c;  
+    cursor: pointer;
+    width: 100%;
+}
+
+body.light-mode #contactForm input[type="submit"] {
+    background-color: #0c0c0c;
+    color: #e5e5e5;
+    padding: 14px 20px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    width: 100%;
+}
+
+.hizmet-header {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .hizmet-list {
+    display: none;
+    margin-left: 20px;
+    padding-left: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .hizmet-list li {
+    list-style: none;
+  }
+  
+  .kurucu-ortak-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon {
+    /* Adjust size if necessary */
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #0c0c0c;
+  }
+
+  body.light-mode .icon {
+    
+    border: 2px solid #e5e5e5;
+}
+
+.anasayfa{
+    font-size: 12px;
+    padding-bottom: 107px;
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s;
+  }
+  #loading.fadeOut {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    body {
+        font-size: 156px; /* Adjust base font-size for mobile */
+    }
+
+    #container {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .info {
+        left: 5%;
+        padding-top: 5px;
+    }
+
+    .rapida, .rapidaa {
+        font-size: 62px;
+    }
+
+    .info nav ul {
+        padding-top: 35%;
+    }
+
+    .info nav ul li {
+        margin-top: 5px;
+        font-size: 6.9em;
+    }
+
+    .des {
+        font-size: 18px;
+    }
+
+    .footer-text {
+        right: 2%;
+        bottom: 2%;
+        font-size: 5em;
+    }
+
+    .anasayfa {
+        font-size: 24px;
+        padding-bottom: 50px;
+    }
+
+    #theme-switcher {
+        top: 5px;
+        right: 10px;
+        font-size: 12px;
+    }
+
+    #contactForm {
+        width: 90%;
+    }
+}
